@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------- Background Colors ----------------- */
+.bg-primary {
+  background-color: #88c0d0;
+} /* Frost blue */
+.dark .bg-primary {
+  background-color: #81a1c1;
+}
+
+.bg-secondary {
+  background-color: #81a1c1;
+} /* Darker Frost */
+.dark .bg-secondary {
+  background-color: #88c0d0;
+}
+
+.bg-accent {
+  background-color: #bf616a;
+} /* Red Aurora */
+.dark .bg-accent {
+  background-color: #d08770;
+}
+
+.bg-success {
+  background-color: #a3be8c;
+} /* Green Aurora */
+.dark .bg-success {
+  background-color: #a3be8c;
+}
+
+.bg-warning {
+  background-color: #ebcb8b;
+} /* Yellow Aurora */
+.dark .bg-warning {
+  background-color: #ebcb8b;
+}
+
+.bg-info {
+  background-color: #8fbcbb;
+} /* Mint Frost */
+.dark .bg-info {
+  background-color: #8fbcbb;
+}
+
+.bg-neutral {
+  background-color: #2e3440;
+} /* Polar Night */
+.dark .bg-neutral {
+  background-color: #2e3440;
+}
+
+.bg-surface {
+  background-color: #3b4252;
+} /* Slightly lighter dark */
+.dark .bg-surface {
+  background-color: #434c5e;
+}
+
+/* ----------------- Text Colors ----------------- */
+.text-primary {
+  color: #88c0d0;
+}
+.dark .text-primary {
+  color: #81a1c1;
+}
+
+.text-secondary {
+  color: #81a1c1;
+}
+.dark .text-secondary {
+  color: #88c0d0;
+}
+
+.text-accent {
+  color: #bf616a;
+}
+.dark .text-accent {
+  color: #d08770;
+}
+
+.text-success {
+  color: #a3be8c;
+}
+.dark .text-success {
+  color: #a3be8c;
+}
+
+.text-warning {
+  color: #ebcb8b;
+}
+.dark .text-warning {
+  color: #ebcb8b;
+}
+
+.text-info {
+  color: #8fbcbb;
+}
+.dark .text-info {
+  color: #8fbcbb;
+}
+
+.text-primary-text {
+  color: #eceff4;
+} /* main text */
+.dark .text-primary-text {
+  color: #e5e9f0;
+}
+
+.text-secondary-text {
+  color: #e5e9f0;
+} /* captions / placeholders */
+.dark .text-secondary-text {
+  color: #d8dee9;
+}
+
+/* ----------------- Border / Divider Colors ----------------- */
+.border-divider {
+  border-color: #434c5e;
+}
+.dark .border-divider {
+  border-color: #3b4252;
+}
+
+/* ----------------- Logo Fill ----------------- */
+.fill-logo {
+  fill: #88c0d0;
+} /* Frost primary */
+.dark .fill-logo {
+  fill: #81a1c1;
+}
+
+/* ----------------- Button / Component Utilities ----------------- */
+.btn-primary {
+  @apply px-4 py-2 rounded-lg font-semibold transition;
+  background-color: #88c0d0;
+  color: #2e3440;
+}
+.dark .btn-primary {
+  background-color: #81a1c1;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-secondary {
+  @apply px-4 py-2 rounded-lg font-semibold transition;
+  background-color: #81a1c1;
+  color: #2e3440;
+}
+.dark .btn-secondary {
+  background-color: #88c0d0;
+}
+.btn-secondary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-accent {
+  @apply px-4 py-2 rounded-lg font-semibold transition;
+  background-color: #bf616a;
+  color: #eceff4;
+}
+.btn-accent:hover {
+  filter: brightness(1.1);
+}
