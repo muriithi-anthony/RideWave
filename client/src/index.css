@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* ----------------- Background Colors ----------------- */
 .bg-primary {
@@ -165,4 +163,25 @@
 }
 .btn-accent:hover {
   filter: brightness(1.1);
+}
+
+.bg-base-100 {
+  background-color: #f0f0f0;
+}
+.dark .bg-base-100 {
+  background-color: #3c3c3c;
+}
+
+.bg-base-200 {
+  background-color: #ebebeb;
+}
+.dark .bg-base-200 {
+  background-color: #373737;
+}
+
+.bg-base-300 {
+  background-color: #e2e2e2;
+}
+.dark .bg-base-300 {
+  background-color: #323232;
 }
