@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, MoonIcon, SunIcon, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ isDark, setIsDark }) => {
   const [isHamburgerVisible, setIsHamburgerVisible] = useState(true);
-  const location = useLocation();
+  useEffect(() => {
+    const outsideClick = (e) => {
+      if (!(document.getElementById("modal").target === e.target)) {
+        setIsHamburgerVisible(true);
+        console.log("shaka");
+      }
+    };
 
+    document.addEventListener("click", (e) => outsideClick(e));
+    return () => document.removeEventListener("click", (e) => outsideClick(e));
+  }, []);
+
+  const location = useLocation();
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -72,12 +83,15 @@ const Navbar = ({ isDark, setIsDark }) => {
           )}
         </button>
         {!isHamburgerVisible && (
-          <nav className="absolute z-50 bg-base-200 h-[200px] w-[150px] top-0 right-0 flex flex-col p-2 m-2 text-base justify-center md:hidden">
+          <nav
+            id="modal"
+            className="absolute z-50 bg-base-200 h-[200px] w-[150px] top-0 right-0 flex flex-col p-2 m-2 text-base justify-center md:hidden"
+          >
             <button
               onClick={() => setIsHamburgerVisible(true)}
               className="absolute z-30 top-0 right-0 "
             >
-              <X className="size-8" />
+              <X className="size-8 hover:cursor-pointer hover:font-semibold hover:text-[#88c0d0]" />
             </button>
             <div>
               <Link

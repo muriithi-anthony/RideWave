@@ -3,6 +3,7 @@ import Slides from "../components/Slides";
 import Info from "../components/Info";
 import Testimonials from "../components/Testimonials";
 import Features from "../components/Features";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Info />
       <Testimonials />
       <Features />
+      <Footer />
     </div>
   );
 };
