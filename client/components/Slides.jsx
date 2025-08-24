@@ -21,9 +21,9 @@ const Slides = () => {
   }, [slideIndex]);
 
   return (
-    <div className="text-center roboto-font">
-      <div className="relative w-full mt-2 h-[calc(100vh-100px)] overflow-hidden flex flex-col items-center justify-around">
-        <div className="text-center text-balance">
+    <div className="text-center roboto-font mb-12">
+      <div className="relative w-full h-[calc(100vh-100px)] overflow-hidden flex flex-col items-center justify-around sm:flex-row sm:mt- sm:h-fit sm:mt-20 md:mt-30">
+        <div className="text-center text-balance sm:w-[50%] sm:text-left sm:flex sm:flex-col">
           <h1 className="text-primary text-[32px]">
             Drive in Style, Arrive with Class.
           </h1>
@@ -31,13 +31,19 @@ const Slides = () => {
             Choose from our fleet of premium cars and enjoy comfort,
             reliability, and elegance — wherever your journey takes you.
           </p>
+          <Link
+            to="/book"
+            className="mt-8 btn-primary hidden sm:inline sm:w-fit"
+          >
+            Book Now
+          </Link>
         </div>
         <img
-          className="h-[250px] max-h-[350px] mt-6 w-full object-contain"
+          className="h-[250px] max-h-[350px] mt-6 w-full object-contain sm:w-[50%]"
           src={imagesArr[slideIndex]}
         />
 
-        <Link to="/book" className="mt-8 btn-primary">
+        <Link to="/book" className="mt-8 btn-primary sm:hidden">
           Book Now
         </Link>
       </div>
