@@ -21,8 +21,8 @@ const Slides = () => {
   }, [slideIndex]);
 
   return (
-    <div className="text-center roboto-font h-screen md:mb-0">
-      <div className="relative w-full h-[calc(100vh-100px)] overflow-hidden flex flex-col items-center justify-around sm:flex-row sm:h-fit sm:mt-20 md:mt-30">
+    <div className="text-center roboto-font h-screen md:flex md:items-center md:mb-0">
+      <div className="relative w-full h-[calc(100vh-100px)] overflow-hidden flex flex-col items-center justify-around sm:flex-row sm:h-fit sm:mt-20 md:mt-0">
         <div className="text-center text-balance sm:w-[50%] sm:text-left sm:flex sm:flex-col">
           <h1 className="text-primary text-[32px]">
             Drive in Style, Arrive with Class.
