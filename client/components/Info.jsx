@@ -23,7 +23,7 @@ const Info = () => {
       </div>
       <div className="mt-6 sm:my-12 sm:flex sm:flex-col sm:mt-0 sm:border-l-2">
         <h3 className="text-secondary text-[24px] text-center">How it works</h3>
-        <ul className="text-base mt-4 px-2 text-center text-balance flex flex-col gap-2">
+        <ul className="text-base mt-4 px-2 text-center text-balance flex flex-col gap-2 pb-6 sm:pb-0">
           <li>
             Choose a car - Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Velit, excepturi.
