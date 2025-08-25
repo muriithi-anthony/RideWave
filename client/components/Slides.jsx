@@ -10,6 +10,7 @@ const Slides = () => {
     "../src/assets/fifth.png",
   ];
   const [slideIndex, setSlideIndex] = useState(0);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setSlideIndex((prevIndex) =>
@@ -23,6 +24,7 @@ const Slides = () => {
   return (
     <div className="text-center roboto-font h-screen md:flex md:items-center md:mb-0">
       <div className="relative w-full h-[calc(100vh-100px)] overflow-hidden flex flex-col items-center justify-around sm:flex-row sm:h-fit sm:mt-20 md:mt-0">
+        {/* Left content */}
         <div className="text-center text-balance sm:w-[50%] sm:text-left sm:flex sm:flex-col">
           <h1 className="text-primary text-[32px]">
             Drive in Style, Arrive with Class.
@@ -31,21 +33,33 @@ const Slides = () => {
             Choose from our fleet of premium cars and enjoy comfort,
             reliability, and elegance — wherever your journey takes you.
           </p>
-          <Link
-            to="/book"
-            className="mt-8 btn-primary hidden sm:inline sm:w-fit"
-          >
-            Book Now
-          </Link>
+
+          {/* Desktop CTAs */}
+          <div className="hidden sm:flex gap-4 mt-8">
+            <Link to="/book" className="btn-primary w-fit">
+              Book Now
+            </Link>
+            <Link to="/fleet" className="btn-secondary w-fit">
+              View Fleet
+            </Link>
+          </div>
         </div>
+
+        {/* Slideshow */}
         <img
           className="h-[250px] max-h-[350px] mt-6 w-full object-contain sm:w-[50%]"
           src={imagesArr[slideIndex]}
         />
 
-        <Link to="/book" className="mt-8 btn-primary sm:hidden">
-          Book Now
-        </Link>
+        {/* Mobile CTAs */}
+        <div className="flex flex-row gap-3 mt-8 sm:hidden">
+          <Link to="/book" className="btn-primary">
+            Book Now
+          </Link>
+          <Link to="/fleet" className="btn-secondary">
+            View Fleet
+          </Link>
+        </div>
       </div>
     </div>
   );
