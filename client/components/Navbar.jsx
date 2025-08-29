@@ -4,17 +4,17 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ isDark, setIsDark }) => {
   const [isHamburgerVisible, setIsHamburgerVisible] = useState(true);
-  useEffect(() => {
-    const outsideClick = (e) => {
-      if (!(document.getElementById("modal").target === e.target)) {
-        setIsHamburgerVisible(true);
-        console.log("shaka");
-      }
-    };
+  // useEffect(() => {
+  //   const outsideClick = (e) => {
+  //     if (!(document.getElementById("modal").target === e.target)) {
+  //       setIsHamburgerVisible(true);
+  //       console.log("shaka");
+  //     }
+  //   };
 
-    document.addEventListener("click", (e) => outsideClick(e));
-    return () => document.removeEventListener("click", (e) => outsideClick(e));
-  }, []);
+  //   document.addEventListener("click", (e) => outsideClick(e));
+  //   return () => document.removeEventListener("click", (e) => outsideClick(e));
+  // }, []);
 
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
@@ -38,7 +38,7 @@ const Navbar = ({ isDark, setIsDark }) => {
               ? "text-primary font-semibold"
               : "text-neutral-500"
           } hover:text-[#88c0d0] hover:font-semibold`}
-          to="/"
+          to="/fleet"
           onClick={() => setIsHamburgerVisible(true)}
         >
           <div>Fleet</div>
@@ -49,7 +49,7 @@ const Navbar = ({ isDark, setIsDark }) => {
               ? "text-primary font-semibold"
               : "text-neutral-500"
           } hover:text-[#88c0d0] hover:font-semibold`}
-          to="/"
+          to="/pricing"
           onClick={() => setIsHamburgerVisible(true)}
         >
           <div>Pricing</div>
@@ -60,7 +60,7 @@ const Navbar = ({ isDark, setIsDark }) => {
               ? "text-primary font-semibold"
               : "text-neutral-500"
           } hover:text-[#88c0d0] hover:font-semibold`}
-          to="/"
+          to="/contact"
           onClick={() => setIsHamburgerVisible(true)}
         >
           <div>Contact</div>
@@ -107,14 +107,14 @@ const Navbar = ({ isDark, setIsDark }) => {
               </Link>
               <Link
                 className={`${
-                  isActive("/browse-cars")
+                  isActive("/fleet")
                     ? "text-primary font-semibold"
                     : "text-neutral"
                 } hover:text-[#88c0d0] hover:font-semibold`}
-                to="/"
+                to="/fleet"
                 onClick={() => setIsHamburgerVisible(true)}
               >
-                <div>Browse Cars</div>
+                <div>Fleet</div>
               </Link>
               <Link
                 className={`${
@@ -122,7 +122,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                     ? "text-primary font-semibold"
                     : "text-neutral"
                 } hover:text-[#88c0d0] hover:font-semibold`}
-                to="/"
+                to="/pricing"
                 onClick={() => setIsHamburgerVisible(true)}
               >
                 <div>Pricing</div>
@@ -133,7 +133,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                     ? "text-primary font-semibold"
                     : "text-neutral"
                 } hover:text-[#88c0d0] hover:font-semibold`}
-                to="/"
+                to="/contact"
                 onClick={() => setIsHamburgerVisible(true)}
               >
                 <div>Contact</div>
@@ -146,7 +146,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                     ? "text-primary font-semibold"
                     : "text-neutral"
                 } hover:text-[#88c0d0] hover:font-semibold`}
-                to="/"
+                to="/about"
                 onClick={() => setIsHamburgerVisible(true)}
               >
                 <div>About</div>
@@ -157,7 +157,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                     ? "text-primary font-semibold"
                     : "text-neutral"
                 } hover:text-[#88c0d0] hover:font-semibold`}
-                to="/"
+                to="/faq"
                 onClick={() => setIsHamburgerVisible(true)}
               >
                 <div>FAQ</div>
@@ -168,7 +168,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                     ? "text-primary font-semibold"
                     : "text-neutral"
                 } hover:text-[#88c0d0] hover:font-semibold`}
-                to="/"
+                to="/auth"
                 onClick={() => setIsHamburgerVisible(true)}
               >
                 <div>Login / Register</div>
